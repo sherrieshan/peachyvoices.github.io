@@ -24,3 +24,23 @@ body {
 p {
   font-family: 'Open Sans', sans-serif;
 }
+
+footer {
+  background-color: #F5D4DB;
+  color: white;
+  text-align: center;
+}
+
+footer h5 {
+  margin: 0;
+  padding: 15px 0;
+}
+
+/* i.fab {
+  display: inline-block;
+  border-radius: 60px;
+  box-shadow: 0px 0px 2px #F5D4DB;
+  background-color: #F5D4DB;
+  padding: 0.5em 0.6em;
+
+} */

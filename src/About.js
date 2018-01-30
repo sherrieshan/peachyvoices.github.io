@@ -11,7 +11,8 @@ class About extends Component {
                     <img src={headshot} className="about-headshot" alt="headshot"/>
                     I'm Sherrie Shan.
                     <br/>Currently residing in Sunnyvale, CA.
-                    <br/>You can contact me at sherrie@sherrievoices.com.
+                    <br/>You can contact me at
+                    <a href="mailto:sherrie@sherrievoices.com"> sherrie@sherrievoices.com</a>
                 </p>
             </div>
         );

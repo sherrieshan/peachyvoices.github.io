@@ -37,6 +37,10 @@ ul.contacts li {
   border-radius: 50%;
 }
 
-ul.contacts a:active:hover:visited {
+ul.contacts a {
   color: #D07991;
+}
+
+ul.contacts a:hover {
+  color: #F5D4DB;
 }
