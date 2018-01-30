@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Landing from './Landing';
 import Demos from './Demos';
+import About from './About';
 import './App.css';
 
 class App extends Component {
@@ -12,8 +13,17 @@ class App extends Component {
           <li style={{fontSize: 60+'px', color:'white'}}>Sherrie Voices</li>
           <li>About Me</li>
         </ul>
-        <Landing></Landing>
-        <Demos></Demos>
+        <Landing/>
+        <Demos/>
+        <About/>
+        <ul className="contacts"> 
+          <a href="https://soundcloud.com/sherrie-shan-744088758">
+            <li><i class="fab fa-soundcloud fa-3x"></i></li>
+          </a>
+          <a href="https://www.linkedin.com/in/sherrieshan/">
+            <li><i class="fab fa-linkedin-in fa-3x"></i></li>
+          </a>
+        </ul>
       </div>
     );
   }
