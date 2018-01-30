@@ -13,25 +13,29 @@ ul.app-menu li {
 }
 
 .app-landing {
-  text-align: right;
-}
-
-.app-landing img {
-  width: 100%;
-  position: fixed;
-  z-index: -1;
-  right: 0;
+  position: absolute;
   top: -195px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: -1;
 }
 
-.app-landing h1 {
+.app-intro {
+  position: relative;
+  text-align: right;
+  height: 1080px;
+}
+
+.app-intro h1 {
   margin-right: 10%;
   margin-top: 120px;
   margin-bottom: 0;
   font-size: 120px;
 }
 
-.app-landing p {
+.app-intro p {
   font-family: "Open Sans", sans-serif;
   font-size: 80px;
   margin-right: 10%;
