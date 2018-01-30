@@ -14,7 +14,7 @@ class Demos extends Component {
                     width="80%" 
                     height="450" 
                     scrolling="yes" 
-                    frameborder="no" 
+                    frameBorder="no" 
                     allow="autoplay" 
                     src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/435708753&amp;color=%23d07991&amp;auto_play=false&amp;hide_related=false&amp;show_comments=true&amp;show_user=true&amp;show_reposts=false&amp;show_teaser=true">
                 </iframe>
