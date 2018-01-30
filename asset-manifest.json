@@ -1,9 +1,10 @@
 {
-  "main.css": "static/css/main.a36abd03.css",
-  "main.css.map": "static/css/main.a36abd03.css.map",
-  "main.js": "static/js/main.62b06c7e.js",
-  "main.js.map": "static/js/main.62b06c7e.js.map",
+  "main.css": "static/css/main.3164862c.css",
+  "main.css.map": "static/css/main.3164862c.css.map",
+  "main.js": "static/js/main.7556768e.js",
+  "main.js.map": "static/js/main.7556768e.js.map",
   "static\\media\\LemonMilk.otf": "static/media/LemonMilk.cef63d63.otf",
   "static\\media\\LemonMilkbold.otf": "static/media/LemonMilkbold.bb255cd0.otf",
-  "static\\media\\landing.jpg": "static/media/landing.a70dae7d.jpg"
+  "static\\media\\headshot_square.jpg": "static/media/headshot_square.272a43f7.jpg",
+  "static\\media\\landing.jpg": "static/media/landing.48513d8a.jpg"
 }
