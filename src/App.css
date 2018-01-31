@@ -11,6 +11,10 @@
   color: white;
 }
 
+ul {
+  padding: 0 40px;
+}
+
 ul li {
   display: inline;
   list-style-type: none;
@@ -26,7 +30,7 @@ ul.app-menu li {
 .contacts {
   background-color: white;
   color: #F5D4DB;
-  margin: 50px 0;
+  margin: 40px 0;
 }
 
 ul.contacts li { 

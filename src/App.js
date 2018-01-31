@@ -21,7 +21,7 @@ class App extends Component {
             <li><i className="fab fa-soundcloud fa-3x"></i></li>
           </a>
           <a href="https://www.linkedin.com/in/sherrieshan/">
-            <li><i className="fab fa-linkedin-in fa-3x"></i></li>
+            <li><i className="fab fa-linkedin fa-3x"></i></li>
           </a>
         </ul>
       </div>
