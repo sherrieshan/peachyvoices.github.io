@@ -36,6 +36,10 @@ footer h5 {
   padding: 15px 0;
 }
 
+a:hover{
+  cursor: pointer;
+}
+
 /* i.fab {
   display: inline-block;
   border-radius: 60px;

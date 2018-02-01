@@ -3,9 +3,18 @@ import './About.css';
 import headshot from './images/headshot_square.jpg';
 
 class About extends Component {
+    componentDidMount() {
+        console.log("About mounted");
+        // find itself on mount y position and offset
+        var e = document.getElementById("about");
+        // add the height of the component to the top to get ending y
+        var start = e.offsetTop - this.props.padding; // give some padding 
+        this.props.setY(start);
+    }
+
     render() {
         return(
-            <div className="about">
+            <div id="about">
                 <h1>About Me</h1>
                 <p>
                     <img src={headshot} className="about-headshot" alt="headshot"/>

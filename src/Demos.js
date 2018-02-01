@@ -5,10 +5,18 @@ import React, { Component } from 'react';
 import './Demos.css'; 
 
 class Demos extends Component {
+    componentDidMount() {
+        console.log("Demos mounted");
+        // find itself on mount y position and offset
+        var e = document.getElementById("demos");
+        // add the height of the component to the top to get ending y
+        var start = e.offsetTop - this.props.padding; // give some padding 
+        this.props.setY(start);
+    }
 
     render() {
         return (
-            <div className="demos"> 
+            <div id="demos"> 
                 <h1>Demos</h1>
                 <iframe title="AudioDemosPlaylist"
                     width="80%" 

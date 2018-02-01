@@ -1,8 +1,8 @@
-.demos {
-    padding-top: 50px;
-    padding-bottom: 100px;
+#demos {
+    padding-top: 30px;
+    padding-bottom: 80px;
 }
 
-.demos h1 {
+#demos h1 {
     color: black;
 }
