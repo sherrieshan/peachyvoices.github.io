@@ -8,7 +8,7 @@ class About extends Component {
         // find itself on mount y position and offset
         var e = document.getElementById("about");
         // add the height of the component to the top to get ending y
-        var start = e.offsetTop - this.props.padding; // give some padding 
+        var start = e.offsetTop; 
         this.props.setY(start);
     }
 

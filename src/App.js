@@ -7,7 +7,7 @@ import './App.css';
 const test = true;
 const tabNames = ["home", "demos", "about"];  // the names of the components/tabs
 const maxPageLengh = 1000000;                 // the max page length for y scrolling
-const padding = 20;                           // extra padding before component to determine active
+const padding = 100;                           // extra padding before component to determine active
 
 class App extends Component {
   constructor() {
@@ -45,7 +45,7 @@ class App extends Component {
 
   // set the y values of the components after they have mounted
   setComponentY(value, name) {
-    this.values[name] = value;
+    this.values[name] = value - padding;
   }
 
   handleScroll(event) {
@@ -99,8 +99,8 @@ class App extends Component {
           </nav>
         }
         <Landing/>
-        <Demos padding={padding} setY={(value) => this.setComponentY(value, "demos")}/>
-        <About padding={padding} setY={(value) => this.setComponentY(value, "about")}/>
+        <Demos setY={(value) => this.setComponentY(value, "demos")}/>
+        <About setY={(value) => this.setComponentY(value, "about")}/>
         <ul className="contacts"> 
           <a href="https://soundcloud.com/sherrie-shan-744088758">
             <li><i className="fab fa-soundcloud fa-3x"></i></li>
