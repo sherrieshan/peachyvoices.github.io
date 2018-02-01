@@ -32,22 +32,27 @@ ul.app-menu li {
   color: #D07991;
 }
 
-.app-nav {
+#app-nav {
   position: fixed;
   top: 0;
   width: 100%;
   padding: 10px;
   background-color: rgba(210, 210, 210, .8);
   z-index: 10;
+  transition: top 0.3s ease-out;
 }
 
-.app-nav a{
+#app-nav a{
   margin: 0 50px;
   color: #D07991;
 }
 
-.app-nav a.nav-active {
+#app-nav a.nav-active {
   color: white;
+}
+
+#app-nav.hidden {
+  top: -100px;
 }
 
 .contacts {

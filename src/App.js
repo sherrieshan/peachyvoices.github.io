@@ -7,7 +7,9 @@ import './App.css';
 const test = true;
 const tabNames = ["home", "demos", "about"];  // the names of the components/tabs
 const maxPageLengh = 1000000;                 // the max page length for y scrolling
-const padding = 100;                           // extra padding before component to determine active
+const padding = 50;                          // extra padding before component to determine active
+const transitionBorder = "demos";             // tab that indicates the border where menu out/in
+const transPadding = 50;                     // padding for where transition begins
 
 class App extends Component {
   constructor() {
@@ -19,9 +21,10 @@ class App extends Component {
       p[tabNames[i] ] = 0;
     }
     this.values = p;
-    console.log(this.props);
+    this.transitionValue = 1000; // default for where menu transitions in
     this.state = {
-      activeTab: ""
+      activeTab: "",
+      displayMenu: false
     }; // set state
   }
 
@@ -46,11 +49,29 @@ class App extends Component {
   // set the y values of the components after they have mounted
   setComponentY(value, name) {
     this.values[name] = value - padding;
+    // if setting value for transition border, then set the value for 
+    // when transition occurs
+    if(name === transitionBorder) {
+      this.transitionValue = value - transPadding;
+    }
   }
 
   handleScroll(event) {
     console.log(window.scrollY);
     var currY = window.scrollY;
+    var s = Object.assign({}, this.state);
+    // first determine if need to show or hide the menu
+    // 1. if scroll is not past transition value and displayMenu is false, do nothing
+    // 2. if scroll is not past transition value and displayMenu is true, change to false
+    // 3. if scroll is past transition value and displayMenu is false, change to true
+    // 4. if scroll is past transition value and displayMenu is true, do nothing
+    if((currY < this.transitionValue && s.displayMenu) ||
+        (currY > this.transitionValue && !s.displayMenu)){
+      s.displayMenu = !s.displayMenu; // change the boolean to display
+      // and set the state
+      this.setState(s);
+    }
+
     // see where the current scroll y is
     // now check between each component to see if it's between any of the components
     // if it is, then go ahead and set that as active in the navigation and return
@@ -60,7 +81,7 @@ class App extends Component {
       var start = this.values[name];
       // end is either max page length, or the beginning of next section
       var end = (i === tabNames.length - 1) ? maxPageLengh : this.values[tabNames[ i + 1]];
-      if( start < currY && currY < end) {
+      if(start < currY && currY < end) {
         // it's inbetween this component, set active tab and stop
         this.setActiveTab(name);
         return;
@@ -85,19 +106,17 @@ class App extends Component {
           <li style={{fontSize: 60+'px', color:'white'}}>Sherrie Voices</li>
           <a onClick={() => this.scrollTo("about")}><li>About Me</li></a>
         </ul>
-        { test && 
-           <nav className="app-nav">
-             <a 
-               className={this.state.activeTab === "home" ? "nav-active": ""} 
-               onClick={() => this.scrollTo("home")}>Home</a>
-             <a 
-               className={this.state.activeTab === "demos" ? "nav-active": ""} 
-               onClick={() => this.scrollTo("demos")}>Demos</a>
-             <a 
-               className={this.state.activeTab === "about" ? "nav-active": ""} 
-               onClick={() => this.scrollTo("about")}>About me</a>
-          </nav>
-        }
+        <nav id="app-nav" className={this.state.displayMenu ? "" : "hidden"}>
+          <a 
+            className={this.state.activeTab === "home" ? "nav-active": ""} 
+            onClick={() => this.scrollTo("home")}>Home</a>
+          <a 
+            className={this.state.activeTab === "demos" ? "nav-active": ""} 
+            onClick={() => this.scrollTo("demos")}>Demos</a>
+          <a 
+            className={this.state.activeTab === "about" ? "nav-active": ""} 
+            onClick={() => this.scrollTo("about")}>About me</a>
+        </nav>
         <Landing/>
         <Demos setY={(value) => this.setComponentY(value, "demos")}/>
         <About setY={(value) => this.setComponentY(value, "about")}/>
