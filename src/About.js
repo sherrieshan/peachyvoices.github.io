@@ -3,15 +3,6 @@ import './About.css';
 import headshot from './images/headshot_square.jpg';
 
 class About extends Component {
-    componentDidMount() {
-        console.log("About mounted");
-        // find itself on mount y position and offset
-        var e = document.getElementById("about");
-        // add the height of the component to the top to get ending y
-        var start = e.offsetTop; 
-        this.props.setY(start);
-    }
-
     render() {
         return(
             <div id="about">
