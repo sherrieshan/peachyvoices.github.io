@@ -9,6 +9,7 @@ const maxPageLengh = 1000000;                 // the max page length for y scrol
 const padding = 50;                          // extra padding before component to determine active
 const transitionBorder = "demos";             // tab that indicates the border where menu out/in
 const transPadding = 50;                     // padding for where transition begins
+const phoneWidth = 600;                       // phone width
 
 class App extends Component {
   constructor() {
@@ -21,9 +22,14 @@ class App extends Component {
     }
     this.values = p;
     this.transitionValue = 1000; // default for where menu transitions in
+    // determine width of device phone or not
+    var d = false;
+    console.log(window.outerWidth);
+    if(window.outerWidth <= phoneWidth) d = true;
+
     this.state = {
       activeTab: "",
-      displayMenu: false
+      displayMenu: d
     }; // set state
   }
 
@@ -69,16 +75,19 @@ class App extends Component {
   handleScroll(event) {
     var currY = window.scrollY;
     var s = Object.assign({}, this.state);
-    // first determine if need to show or hide the menu
-    // 1. if scroll is not past transition value and displayMenu is false, do nothing
-    // 2. if scroll is not past transition value and displayMenu is true, change to false
-    // 3. if scroll is past transition value and displayMenu is false, change to true
-    // 4. if scroll is past transition value and displayMenu is true, do nothing
-    if((currY < this.transitionValue && s.displayMenu) ||
-        (currY > this.transitionValue && !s.displayMenu)){
-      s.displayMenu = !s.displayMenu; // change the boolean to display
-      // and set the state
-      this.setState(s);
+    // only toggle the menu if not in phone
+    if(window.outerWidth > phoneWidth) {
+      // first determine if need to show or hide the menu
+      // 1. if scroll is not past transition value and displayMenu is false, do nothing
+      // 2. if scroll is not past transition value and displayMenu is true, change to false
+      // 3. if scroll is past transition value and displayMenu is false, change to true
+      // 4. if scroll is past transition value and displayMenu is true, do nothing
+      if((currY < this.transitionValue && s.displayMenu) ||
+          (currY > this.transitionValue && !s.displayMenu)){
+        s.displayMenu = !s.displayMenu; // change the boolean to display
+        // and set the state
+        this.setState(s);
+      }
     }
 
     // see where the current scroll y is

@@ -62,3 +62,10 @@ ul.contacts a {
 ul.contacts a:hover {
   color: #F5D4DB;
 }
+
+/* For phones */
+@media(max-width:600px) { 
+  #app-nav { 
+    transition: none;
+  }
+}
