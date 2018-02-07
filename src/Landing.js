@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './Landing.css';
-import landingSmall from './images/landing_small.jpg';
-import landing from './images/landing_cropped.jpg';
+import landingSmall from './images/landing_small.jpg';  // for mobile landing
+import landing from './images/landing.jpg';     // for other landing
 
 class Landing extends Component {
     // send the click back to parent to handle scroll
