@@ -4,17 +4,41 @@
     width: 100%;
     padding-top: 50px;
     padding-bottom: 80px;
+    overflow: auto;
+}
+
+.about-info {
+    float: left;
+    width: 55%;
+    text-align: left;
+    font-size: 1.25em;
 }
 
 #about p {
-    margin: 50px 100px;
-    text-align: left;
-    height: 500px;
+    padding: 5% 15%;
+    width: 70%;
+    margin: 0;
+}
+
+.headshot-container {
+    float: right;
+    width: 45%;
 }
 
 .about-headshot {
-    float: right;
-    width: 500px;
     border-radius: 50%;
-    /* padding: 20px 50px 20px 0; */
+    padding: 5% 15%;
+    width: 70%;
+}
+
+/* For phones */
+@media(max-width:600px) { 
+    .about-info {
+        width: 100%;
+        font-size: 1em;
+    }
+
+    .headshot-container {
+        width: 100%;
+    }
 }

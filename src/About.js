@@ -7,12 +7,16 @@ class About extends Component {
         return(
             <div id="about">
                 <h1>About Me</h1>
-                <p>
+                <div className="headshot-container"> 
                     <img src={headshot} className="about-headshot" alt="headshot"/>
-                    I'm Sherrie Shan.
-                    <br/>Currently residing in Sunnyvale, CA.
-                    <br/>You can contact me at <a href="mailto:sherrie@sherrievoices.com">sherrie@sherrievoices.com</a>
-                </p>
+                </div>
+                <div className="about-info">
+                    <p>
+                        I'm Sherrie Shan.
+                        <br/>Currently residing in Sunnyvale, CA.
+                        <br/>You can contact me at <a href="mailto:sherrie@sherrievoices.com">sherrie@sherrievoices.com</a>
+                    </p>
+                </div>
             </div>
         );
     }
