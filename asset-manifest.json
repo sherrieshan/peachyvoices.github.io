@@ -1,11 +1,11 @@
 {
-  "main.css": "static/css/main.30e8ef7d.css",
-  "main.css.map": "static/css/main.30e8ef7d.css.map",
-  "main.js": "static/js/main.f101b9e9.js",
-  "main.js.map": "static/js/main.f101b9e9.js.map",
+  "main.css": "static/css/main.86cd9814.css",
+  "main.css.map": "static/css/main.86cd9814.css.map",
+  "main.js": "static/js/main.eaedcb67.js",
+  "main.js.map": "static/js/main.eaedcb67.js.map",
   "static\\media\\LemonMilk.otf": "static/media/LemonMilk.cef63d63.otf",
   "static\\media\\LemonMilkbold.otf": "static/media/LemonMilkbold.bb255cd0.otf",
   "static\\media\\headshot_square.jpg": "static/media/headshot_square.a4dd4179.jpg",
-  "static\\media\\landing_cropped.jpg": "static/media/landing_cropped.02638ea8.jpg",
-  "static\\media\\landing_small.jpg": "static/media/landing_small.017c8af6.jpg"
+  "static\\media\\landing.jpg": "static/media/landing.4994b08e.jpg",
+  "static\\media\\landing_small.jpg": "static/media/landing_small.76e6bcbf.jpg"
 }
