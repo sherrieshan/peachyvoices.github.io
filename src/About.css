@@ -37,8 +37,17 @@
         width: 100%;
         font-size: 1em;
     }
+    #about p { 
+        padding: 5% 10%;
+        width: 80%;
+    }
 
     .headshot-container {
         width: 100%;
+    }
+
+    .about-headshot {
+        padding: 5% 10%;
+        width: 80%;
     }
 }

@@ -24,7 +24,6 @@ class App extends Component {
     this.transitionValue = 1000; // default for where menu transitions in
     // determine width of device phone or not
     var d = false;
-    console.log(window.outerWidth);
     if(window.outerWidth <= phoneWidth) d = true;
 
     this.state = {
@@ -57,12 +56,10 @@ class App extends Component {
     if(name === transitionBorder) {
       this.transitionValue = value - transPadding;
     }
-    console.log(this.values);
   }
 
   // after the entire page is fully loaded, obtain the values for the menu
   setAllY(event) {
-    console.log("content loaded");
     // iterate through each main element on page to locate its position
     for(var i = 0; i < tabNames.length; i++) {
       var name = tabNames[i];
@@ -107,15 +104,37 @@ class App extends Component {
     }
   }
 
+  // handle what happens on resize
+  handleResize(event) {
+    // set a time out so that the resize only happens at a rate of 15 fps
+    var resizeTimeout;
+    if(!resizeTimeout) {
+      resizeTimeout = setTimeout(function() {
+        resizeTimeout = null; // reset timeout
+        // now handle the resize event
+        // when resize, recheck the values for the menu
+        this.setAllY();
+        // now double check if it's a phone view or not
+        // if it's a phone view and menu is not set true in active, then set it
+        var s = Object.assign( {}, this.state);
+        if((window.outerWidth <= phoneWidth) && !s.displayMenu) {
+          s.displayMenu = !s.displayMenu;
+          this.setState(s);
+        }
+      }.bind(this), 66);
+    }
+  }
+
   componentDidMount() {
-    console.log(this.state);
     window.addEventListener("load", this.setAllY.bind(this));
     window.addEventListener("scroll", this.handleScroll.bind(this));
+    window.addEventListener("resize", this.handleResize.bind(this));
   }
 
   componentWillUnmount() {
     window.removeEventListener("load", this.setAllY.bind(this));
     window.removeEventListener('scroll', this.handleScroll.bind(this));
+    window.removeEventListener("resize", this.handleResize.bind(this));
   }
 
   render() {
