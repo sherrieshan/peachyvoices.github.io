@@ -14,7 +14,7 @@ class About extends Component {
                     <p>
                         I'm Sherrie Shan.
                         <br/>Currently residing in Sunnyvale, CA.
-                        <br/>You can contact me at <a href="mailto:sherrie@sherrievoices.com">sherrie@sherrievoices.com</a>
+                        <br/>You can contact me at <a href="mailto:shansherrie@gmail.com">shansherrie@gmail.com</a>
                     </p>
                 </div>
             </div>
