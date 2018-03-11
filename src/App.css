@@ -25,7 +25,7 @@ ul li {
   top: 0;
   width: 100%;
   padding: 10px;
-  background-color: rgba(210, 210, 210, .8);
+  background-color: rgba(210, 209, 209, .8);
   z-index: 10;
   transition: top 0.3s ease-out;
 }
