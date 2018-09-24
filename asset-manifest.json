@@ -1,11 +1,12 @@
 {
-  "main.css": "static/css/main.4d30e7ce.css",
-  "main.css.map": "static/css/main.4d30e7ce.css.map",
-  "main.js": "static/js/main.aef26435.js",
-  "main.js.map": "static/js/main.aef26435.js.map",
+  "main.css": "static/css/main.7f89ebf2.css",
+  "main.css.map": "static/css/main.7f89ebf2.css.map",
+  "main.js": "static/js/main.67755ea2.js",
+  "main.js.map": "static/js/main.67755ea2.js.map",
   "static\\media\\LemonMilk.otf": "static/media/LemonMilk.cef63d63.otf",
   "static\\media\\LemonMilkbold.otf": "static/media/LemonMilkbold.bb255cd0.otf",
   "static\\media\\headshot_square.jpg": "static/media/headshot_square.a4dd4179.jpg",
   "static\\media\\landing.jpg": "static/media/landing.4994b08e.jpg",
-  "static\\media\\landing_small.jpg": "static/media/landing_small.76e6bcbf.jpg"
+  "static\\media\\landing_small.jpg": "static/media/landing_small.76e6bcbf.jpg",
+  "static\\media\\momotransparent.png": "static/media/momotransparent.a02163e6.png"
 }
