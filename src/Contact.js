@@ -15,12 +15,7 @@ class Contact extends Component {
             link: url + emailName + "@" + emailDomain
         };
     }
-
-    // submit form and recieve a thanks/notification
-    handleSubmit() {
-        console.log("submit clicked")
-    }
-
+    // TODO: redirect to some thank you after contacted instead of just back to contacts
     render() {
         return(
             <div id="contact">
@@ -33,8 +28,8 @@ class Contact extends Component {
                     <input type="hidden" name="_subject" value="From Peachy Voices!" />
                     <textarea name="message" placeholder="Your message" style={{height:200+'px'}}></textarea>
                     <input type="text" name="_gotcha" style={{display:'none'}} />
-                    <input type="hidden" name="_next" value="https://peachyvoices.com/#contact" />
-                    <button onClick={() => this.handleSubmit()} className="contact-button" type="submit">Send</button>
+                    <input type="hidden" name="_next" value="www.peachyvoices.com/#contact" />
+                    <button className="contact-button" type="submit">Send</button>
                 </form>
             </div>
         );
