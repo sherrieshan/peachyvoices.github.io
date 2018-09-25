@@ -69,6 +69,15 @@ ul.contacts i:hover {
     font-size: 1.5em;
   }
   #app-nav { 
+    padding: 10px 0;
     transition: none;
+  }
+}
+
+/* For small phones */
+@media(max-width:450px) { 
+  #app-nav a {
+    margin: 0 2%;
+    font-size: 0.75em;
   }
 }
