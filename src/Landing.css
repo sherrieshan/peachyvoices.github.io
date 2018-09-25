@@ -32,6 +32,10 @@ ul.app-menu .app-brand {
     color:white;
 }
 
+.app-logo {
+    width: 5%;
+}
+
 .app-intro {
     position: absolute;
     width: 100%;
@@ -65,6 +69,10 @@ ul.app-menu .app-brand {
         margin-top: 10%;
         font-size: 5vw;
         color:white;
+    }
+
+    .app-logo {
+        width: 10%;
     }
 
     .app-intro {

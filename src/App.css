@@ -51,20 +51,23 @@ ul li {
 }
 
 ul.contacts li { 
-  margin: 0 10%;
-  border-radius: 50%;
+  margin: 0 5%;
+  /* border-radius: 50%; */
 }
 
 ul.contacts a {
   color: #D07991;
 }
 
-ul.contacts a:hover {
+ul.contacts i:hover {
   color: #F5D4DB;
 }
 
 /* For phones */
 @media(max-width:600px) { 
+  ul.contacts i.fa-2x { 
+    font-size: 1.5em;
+  }
   #app-nav { 
     transition: none;
   }

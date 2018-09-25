@@ -19,7 +19,7 @@ body {
   padding: 0;
 }
 
-p {
+p, input[type=text], textarea {
   font-family: 'Open Sans', sans-serif;
 }
 

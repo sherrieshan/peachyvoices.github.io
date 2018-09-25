@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import Landing from './Landing';
 import Demos from './Demos';
+import Contact from './Contact';
 import About from './About';
 import './App.css';
 
-const tabNames = ["home", "demos", "about"];  // the names of the components/tabs
-const maxPageLengh = 1000000;                 // the max page length for y scrolling
-const padding = 50;                          // extra padding before component to determine active
-const transitionBorder = "demos";             // tab that indicates the border where menu out/in
-const transPadding = 50;                     // padding for where transition begins
-const phoneWidth = 600;                       // phone width
+const tabNames = ["home", "demos", "contact", "about"]; // the names of the components/tabs
+const maxPageLengh = 1000000;                           // the max page length for y scrolling
+const padding = 50;                                     // extra padding before component to determine active
+const transitionBorder = "demos";                       // tab that indicates the border where menu out/in
+const transPadding = 50;                                // padding for where transition begins
+const phoneWidth = 600;                                 // phone width
 
 class App extends Component {
   constructor() {
@@ -148,19 +149,31 @@ class App extends Component {
             className={this.state.activeTab === "demos" ? "nav-active": ""} 
             onClick={() => this.scrollTo("demos")}>Demos</a>
           <a 
+            className={this.state.activeTab === "contact" ? "nav-active": ""} 
+            onClick={() => this.scrollTo("contact")}>Contact</a>
+          <a 
             className={this.state.activeTab === "about" ? "nav-active": ""} 
             onClick={() => this.scrollTo("about")}>About me</a>
         </nav>
         <Landing handleScroll={(id) => this.scrollTo(id)}/>
         <Demos/>
+        <Contact/>
         <About/>
         <ul className="contacts"> 
+          <a/>
           <a href="https://soundcloud.com/sherrie-shan-744088758">
             <li><i className="fab fa-soundcloud fa-2x"></i></li>
+          </a>
+          <a href="https://www.instagram.com/momokyandee/">
+            <li><i className="fab fa-instagram fa-2x"></i></li>
+          </a>
+          <a href="https://twitter.com/SherrieShan">
+            <li><i className="fab fa-twitter fa-2x"></i></li>
           </a>
           <a href="https://www.linkedin.com/in/sherrieshan/">
             <li><i className="fab fa-linkedin fa-2x"></i></li>
           </a>
+          <a/>
         </ul>
       </div>
     );
