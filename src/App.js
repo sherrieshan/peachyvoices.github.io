@@ -167,6 +167,9 @@ class App extends Component {
           <a href="https://www.instagram.com/momokyandee/">
             <li><i className="fab fa-instagram fa-2x"></i></li>
           </a>
+          <a href="https://www.youtube.com/channel/UCH4bUIfh7tCu9HHBugEZ4Jg">
+            <li><i className="fab fa-youtube fa-2x"></i></li>
+          </a>
           <a href="https://twitter.com/SherrieShan">
             <li><i className="fab fa-twitter fa-2x"></i></li>
           </a>
