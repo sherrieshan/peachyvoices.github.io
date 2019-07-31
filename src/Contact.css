@@ -10,8 +10,8 @@
 }
 
 form {
-    margin-left: 10%;
-    margin-right: 10%;
+    margin-left: 20%;
+    margin-right: 20%;
     padding: 25px 50px;
     background-color: #F5D4DB;
 }
@@ -39,6 +39,13 @@ input, textarea {
 
 .contact-button:hover {
     background-color: #f7afa0;
+}
+
+@media(max-width:1400px) {
+    form {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
 }
 
 @media(max-width:600px) { 
