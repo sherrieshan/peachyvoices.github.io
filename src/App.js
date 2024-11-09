@@ -173,6 +173,9 @@ class App extends Component {
           <a href="https://twitter.com/SherrieShan">
             <li><i className="fab fa-twitter fa-2x"></i></li>
           </a>
+          <a href="https://bsky.app/profile/sherrieshan.bsky.social">
+            <li><i className="fab fa-bluesky fa-2x"></i></li>
+          </a>
           <a href="https://www.linkedin.com/in/sherrieshan/">
             <li><i className="fab fa-linkedin fa-2x"></i></li>
           </a>
